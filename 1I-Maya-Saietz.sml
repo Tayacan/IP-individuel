@@ -16,7 +16,7 @@ end;
 
 (*powerRealInt : real * int -> real*)
 fun powerRealInt (_, 0) = 1.0
-  | powerRealInt (r : real, n) = if n < 0
+  | powerRealInt (r, n) = if n < 0
                                  then 1.0 / powerRealInt (r, ~ n)
                                  else r * powerRealInt (r, n - 1);
 
